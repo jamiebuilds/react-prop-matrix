@@ -11,16 +11,16 @@ yarn add react-prop-matrix
 ## Example
 
 ```js
-import PropsMatrix from 'react-props-matrix';
+import PropMatrix from 'react-prop-matrix';
 
 let options = {
   background: ['red', 'green', 'blue'],
   children: ['Hello', 'World'],
 };
 
-<Matrix options={options}>
+<PropMatrix options={options}>
   {props => <Button {...props}>}
-</Matrix>
+</PropMatrix>
 ```
 
 Will generate:
@@ -40,7 +40,7 @@ Will generate:
 ##### With Filters
 
 ```js
-import PropsMatrix from 'react-props-matrix';
+import PropMatrix from 'react-prop-matrix';
 
 let options = {
   background: ['red', 'green', 'blue'],
@@ -68,14 +68,14 @@ Will generate:
 
 ## API
 
-### `<PropsMatrix/>`
+### `<PropMatrix/>`
 
 #### `props.options`
 
 An object of props containing arrays with possible values.
 
 ```js
-<PropsMatrix
+<PropMatrix
   options={{
     background: ['red', 'blue', 'green'],
     children: ['Hello', 'World'],
@@ -88,7 +88,7 @@ Optionally filter the generated matrix to only include items that have matching
 props. An empty array will match all items.
 
 ```js
-<PropsMatrix
+<PropMatrix
   filters={{
     background: ['red', 'blue'],
     children: ['Hello'],
@@ -101,7 +101,7 @@ A function that gets called for each item in the generated matrix and returns
 React elements.
 
 ```js
-<PropsMatrix
+<PropMatrix
   children={props => (
     <Component {...props}/>
   )}/>
