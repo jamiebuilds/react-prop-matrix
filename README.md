@@ -52,7 +52,7 @@ let filters = {
   children: ['Hello'],
 };
 
-<Matrix options={options}>
+<Matrix filters={filters} options={options}>
   {props => <Button {...props}>}
 </Matrix>
 ```
