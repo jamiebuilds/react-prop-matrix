@@ -1,6 +1,6 @@
 {
   "name": "react-prop-matrix",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Render something using every possible combination of props",
   "main": "index.js",
   "repository": "https://github.com/jamiebuilds/react-prop-matrix",
