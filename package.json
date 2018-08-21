@@ -1,0 +1,20 @@
+{
+  "name": "react-prop-matrix",
+  "version": "0.0.0",
+  "description": "Render something using every possible combination of props",
+  "main": "index.js",
+  "repository": "https://github.com/jamiebuilds/react-prop-matrix",
+  "author": "Jamie Kyle <me@thejameskyle.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava"
+  },
+  "peerDependencies": {
+    "react": "^16.4.2"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "react": "^16.4.2",
+    "react-test-renderer": "^16.4.2"
+  }
+}
