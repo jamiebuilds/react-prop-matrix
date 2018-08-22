@@ -16,5 +16,8 @@
     "ava": "^0.25.0",
     "react": "^16.4.2",
     "react-test-renderer": "^16.4.2"
+  },
+  "dependencies": {
+    "memoize-one": "^4.0.0"
   }
 }

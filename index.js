@@ -1,20 +1,21 @@
 'use strict';
 const React = require("react");
+const memoizeOne = require("memoize-one");
 
-function PropMatrix(props) {
+let toMatrix = memoizeOne((options, filters) => {
   let matrix = [{}];
-  let names = Object.keys(props.options);
+  let names = Object.keys(options);
 
   for (let name of names) {
-    let values = props.options[name];
+    let values = options[name];
     let nextMatrix = [];
 
     for (let value of values) {
       if (
-        props.filters &&
-        Array.isArray(props.filters[name]) &&
-        props.filters[name].length &&
-        !props.filters[name].includes(value)
+        filters &&
+        Array.isArray(filters[name]) &&
+        filters[name].length &&
+        !filters[name].includes(value)
       ) {
         continue;
       }
@@ -26,6 +27,12 @@ function PropMatrix(props) {
 
     matrix = nextMatrix;
   }
+
+  return matrix;
+});
+
+function PropMatrix(props) {
+  let matrix = toMatrix(props.options, props.filters);
 
   return React.createElement(
     React.Fragment,
