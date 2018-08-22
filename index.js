@@ -2,7 +2,7 @@
 const React = require("react");
 
 function PropMatrix(props) {
-  let matrix = [];
+  let matrix = [{}];
   let names = Object.keys(props.options);
 
   for (let name of names) {
@@ -19,12 +19,8 @@ function PropMatrix(props) {
         continue;
       }
 
-      if (!matrix.length) {
-        nextMatrix.push({ [name]: value });
-      } else {
-        for (let item of matrix) {
-          nextMatrix.push(Object.assign({}, item, { [name]: value }));
-        }
+      for (let item of matrix) {
+        nextMatrix.push(Object.assign({}, item, { [name]: value }));
       }
     }
 
