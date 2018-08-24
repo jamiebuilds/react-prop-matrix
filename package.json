@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/jamiebuilds/react-prop-matrix",
   "author": "Jamie Kyle <me@thejameskyle.com>",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "test": "ava"
   },
